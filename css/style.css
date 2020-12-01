@@ -66,3 +66,23 @@ header img {
 .cd span.year {
     color: grey;
 }
+.filtered {
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title_filter > h4 {
+    margin-right: 10px;
+    font-size:20px;
+}
+.genres_selected {
+    width: 100px;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+}

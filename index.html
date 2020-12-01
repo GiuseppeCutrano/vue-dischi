@@ -13,12 +13,23 @@
         <div class="container">
           <img src="img/logo.png" alt="logo" />
         </div>
+        <div class="filtered">
+                <div class="title_filter">
+                  <h4>Scegli il tuo genere</h4>
+                </div>
+
+                <select class="genres_selected" v-model="filterAlb">
+                    <i class="fas fa-angle-down"></i>
+                    <option value="All">All</option>
+                    <option :value="genre" v-for="genre in genres">{{ genre }}</option>
+                </select>
+            </div>
 
       </header>
 
       <div class="cds-container container">
         <!-- Disco ad esempio -->
-        <div v-for="el in albums" class="cd">
+        <div v-for="el in albums" v-if="filterAlb == el.genre || filterAlb == 'All'"class="cd">
           <img :src="el.poster" alt="">
           <h3>{{el.title}}</h3>
           <span class="author">{{el.author}}</span>
